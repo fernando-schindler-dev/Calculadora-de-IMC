@@ -59,7 +59,7 @@ label {
 .formulario input[type="button"] {
   cursor: pointer;
   padding: 0.5rem;
-  background: green;
+  background: darkcyan;
   color: #fff;
   border: none;
   border-radius: 0.75rem;
@@ -69,16 +69,28 @@ label {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .formulario input[type="button"]:hover {
-  background: limegreen;
+  filter: brightness(120%);
 }
 .resultado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 9.375rem;
   padding: 0.75rem;
   font-size: 1.5rem;
-  text-align: center;
   border: 0.125rem solid #222;
   border-radius: 0.75rem;
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 1); */
+}
+.resultado span {
+  font-weight: bold;
+}
+.resultado span.red {
+  color: red;
+  filter: brightness(70%);
+}
+.resultado span.green {
+  color: lime;
+  filter: brightness(50%);
 }
 .autor {
   margin-top: 2rem;
