@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora de IMC</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <section class="container">
-      <h1>Calculadora de IMC</h1>
-      <form class="formulario">
-        <label for="peso">PESO</label>
-        <input type="number" name="peso" class="peso" required />
-        <label for="altura">ALTURA</label>
-        <input type="number" name="altura" class="altura" required />
-        <input type="button" value="CALCULAR" class="btnCalcular" />
-      </form>
-      <output class="resultado"></output>
-    </section>
 
-    <section class="autor">
-      <p>Feito por: <span>Fernando Schindler</span></p>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-    <script src="./script.js"></script>
-  </body>
+<body>
+  <section class="container">
+    <h1>Calcule o seu IMC:</h1>
+    <form class="formulario" autocomplete="off">
+      <label for="peso">PESO</label>
+      <input type="number" name="peso" class="peso" required />
+      <label for="altura">ALTURA</label>
+      <input type="number" name="altura" class="altura" required />
+      <input type="button" value="CALCULAR" class="btnCalcular" />
+    </form>
+    <output class="resultado"></output>
+  </section>
+
+  <section class="autor">
+    <p>Feito por: <span>Fernando Schindler</span></p>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>

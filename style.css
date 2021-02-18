@@ -4,8 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Consolas", "Courier New", Courier, monospace;
-  color: #ccc;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 html {
   font-size: 16px;
@@ -16,92 +16,99 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #333;
-}
-input,
-label {
-  font-size: 1.25rem;
+  background: #eee;
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 31.25rem;
-  height: 34.375rem;
-  padding: 2rem;
-  background: #111;
+  padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background: #800000;
+  box-shadow: 1px 1px 3px #400000;
 }
 .container > h1 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  font-size: 2.375rem;
   text-align: center;
-  font-size: 2.5rem;
+  color: #fff;
 }
 .formulario {
   display: flex;
   flex-direction: column;
 }
 .formulario label {
-  margin-left: 0.5rem;
-  font-size: 1.5rem;
+  margin-left: 0.75rem;
+  font-size: 1.4375rem;
+  color: #ccc;
 }
 .formulario input {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
-.formulario input:not([type="button"]) {
-  padding: 0.5rem 0.75rem;
-  background: #222;
-  font-size: 1.5rem;
-  border: 0.125rem solid #222;
-  border-radius: 0.75rem;
-}
-.formulario input[type="button"] {
-  cursor: pointer;
-  padding: 0.5rem;
-  background: darkcyan;
-  color: #fff;
+.formulario input:not([type='button']) {
+  padding: 0.5625rem 1rem;
   border: none;
   border-radius: 0.75rem;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background: #700000;
+  color: #fff;
+}
+.formulario input:not([type='button']):focus {
+  outline: none;
+}
+.formulario input[type='button'] {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  outline: none;
+  font-size: 1.875rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background: #00cd00;
+  color: #fff;
 }
-.formulario input[type="button"]:hover {
-  filter: brightness(120%);
+.formulario input[type='button']:hover {
+  filter: brightness(90%);
 }
 .resultado {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 9.375rem;
+  height: 10.9375rem;
+  margin-top: 2rem;
   padding: 0.75rem;
-  font-size: 1.5rem;
-  border: 0.125rem solid #222;
+  border: 0.1875rem solid #700000;
   border-radius: 0.75rem;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
 }
 .resultado span {
   font-weight: bold;
 }
 .resultado span.red {
-  color: red;
-  filter: brightness(70%);
+  color: orange;
 }
 .resultado span.green {
-  color: lime;
-  filter: brightness(50%);
+  color: limegreen;
+}
+.resultado span.erro {
+  letter-spacing: -0.15rem;
+  color: #fff;
 }
 .autor {
   margin-top: 2rem;
   font-weight: bold;
 }
 .autor p {
-  font-size: 1.25rem;
-  color: #777;
+  font-size: 1.4375rem;
+  color: #aaa;
 }
 .autor p span {
-  font-size: 1.5rem;
+  font-size: 1.6875rem;
   text-decoration: underline;
-  color: #777;
+  color: #aaa;
 }
