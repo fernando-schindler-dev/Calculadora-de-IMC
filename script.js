@@ -1,22 +1,22 @@
-const btnCalcular = document.querySelector('.btnCalcular');
-const resultado = document.querySelector('.resultado');
+const btnCalculate = document.querySelector('.btnCalculate');
+const result = document.querySelector('.result');
 
-function corrigirAltura(altura) {
-  let corrigido;
+function correctHeight(height) {
+  let corrected;
 
-  if (!(altura.includes(',') || altura.includes('.'))) {
-    const parte1 = altura.slice(0, 1);
-    const parte2 = altura.slice(1);
-    corrigido = parte1.concat('.', parte2);
+  if (!(height.includes(',') || height.includes('.'))) {
+    const part1 = height.slice(0, 1);
+    const part2 = height.slice(1);
+    corrected = part1.concat('.', part2);
   }
 
-  return corrigido || altura;
+  return corrected || height;
 }
 
-function calculoIMC(peso, altura) {
-  const alturaCorrigida = corrigirAltura(altura);
+function calculateIMC(weight, height) {
+  const correctedHeight = correctHeight(height);
 
-  const IMC = peso / (alturaCorrigida * alturaCorrigida);
+  const IMC = weight / (correctedHeight * correctedHeight);
 
   let resultIMC;
 
@@ -30,16 +30,16 @@ function calculoIMC(peso, altura) {
   return resultIMC;
 }
 
-function erroForm() {
-  return "<span class='erro'>POR FAVOR, PREENCHA OS CAMPOS!</span>";
+function errorForm() {
+  return "<span class='error'>POR FAVOR, PREENCHA OS CAMPOS!</span>";
 }
 
-function gerarIMC() {
-  const peso = +document.querySelector('.peso').value;
-  const altura = document.querySelector('.altura').value;
+function handleClick() {
+  const weight = +document.querySelector('.weight').value;
+  const height = document.querySelector('.height').value;
 
-  if (peso && altura) resultado.innerHTML = calculoIMC(peso, altura);
-  else resultado.innerHTML = erroForm();
+  if (weight && height) result.innerHTML = calculateIMC(weight, height);
+  else result.innerHTML = errorForm();
 }
 
-btnCalcular.addEventListener('click', gerarIMC);
+btnCalculate.addEventListener('click', handleClick);
